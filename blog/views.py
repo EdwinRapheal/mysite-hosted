@@ -68,7 +68,7 @@ def sign_in(request):
 			username = form.cleaned_data.get('username')
 			raw_password = form.cleaned_data.get('password')
 			user = authenticate(username=username, password=raw_password)
-			login(request, user)
+			# login(request, user)
 			return redirect('post_list')
 	else:
 		form=UserCreationForm()
